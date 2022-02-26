@@ -4,13 +4,14 @@ def getRandomString(length): #Letters and numbers
     pool=string.ascii_lowercase+string.digits
     return "".join(random.choice(pool) for i in range(length))
 
-def getRandomText(length): #Chars only
-    return "".join(random.choice(string.ascii_lowercase) for i in range(length))
+# def getRandomText(length): #Chars only
+  #  return "".join(random.choice(string.ascii_lowercase) for i in range(length))
 
 def generate():
-    nick = getRandomText(8)
+    num = int(input("Number of words to generate: "))
+    nick = input("Give me your nick: ")
     passw = "premium123"
-    email = nick+"@"+"bedul"+".net"
+    email = nick+"@"+"flashpay"+".my.id"
 
     headers={"Accept-Encoding": "gzip",
              "Accept-Language": "en-US",
@@ -18,8 +19,7 @@ def generate():
              "Connection": "Keep-Alive",
              "Content-Type": "application/x-www-form-urlencoded",
              "Host": "spclient.wg.spotify.com",
-             "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1
-",
+             "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1",
              "Spotify-App-Version": "8.6.72",
              "X-Client-Id": getRandomString(32)}
     
